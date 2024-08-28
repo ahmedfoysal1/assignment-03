@@ -32,6 +32,8 @@
                 extend: {
                     colors: {
                         "book-consult": 'rgb(171, 239, 95);',
+                        "footercolor":  'rgb(28, 28, 28);',
+                        "color": 'rgb(115, 115, 115);'
                     }
                 }
             }
@@ -208,7 +210,7 @@
             <!-- grid image section -->
             <div class="grid lg:grid-cols-12 container mx-auto gap-4">
                 <!-- image 1  -->
-                <div class="p-4 lg:flex items-center gap-4 border border-gray-400 rounded-xl lg:col-span-8 lg:px-5 m-7 lg:m-0">
+                <div class="p-4 lg:flex items-center gap-4 border border-gray-400 rounded-xl lg:col-span-8 lg:px-5 m-7 lg:m-0 order-1">
                     <div>
                         <img class="w-80 lg:w-96" src="images/img1.png" alt="">
                     </div>
@@ -221,24 +223,24 @@
 
                 <!-- image 2  -->
 
-                <div class="flex border border-gray-400 rounded-xl lg:col-span-4 mx-auto p-4">
+                <div class="flex border border-gray-400 rounded-xl lg:col-span-4 mx-auto p-4 order-2">
                     <div>
-                        <img class="w-72" src="images/img2.png" alt="">
+                        <img class=" lg:w-72" src="images/img2.png" alt="">
                     </div>
                     
                 </div>
 
                 <!-- image 3  -->
 
-                <div class="flex border border-gray-400 rounded-xl lg:col-span-3 mx-auto p-4">
+                <div class="flex border border-gray-400 rounded-xl lg:col-span-3 mx-auto p-4 order-5 lg:order-3">
                     <div>
-                        <img class="w-52" src="images/img3.png" alt="">
+                        <img class="w-80 lg:w-52" src="images/img3.png" alt="">
                     </div>
                 </div>
 
                 <!-- image 4  -->
 
-                <div class="lg:flex items-center px-5 gap-4 border border-gray-400 rounded-xl lg:col-span-6 m-7 lg:m-0 p-4">
+                <div class="lg:flex items-center px-5 gap-4 border border-gray-400 rounded-xl lg:col-span-6 m-7 lg:m-0 p-4 order-4">
                     <div>
                         <img class="w-80 lg:w-96" src="images/img4.png" alt="">
                     </div>
@@ -251,35 +253,51 @@
 
                 <!-- image 5  -->
 
-                <div class="flex border border-gray-400 rounded-xl lg:col-span-3 mx-auto p-4">
+                <div class="flex border border-gray-400 rounded-xl lg:col-span-3 mx-auto p-4 order-3 lg:order-5">
                     <div>
-                        <img class="w-52" src="images/img5.png" alt="">
+                        <img class="w-80 lg:w-52" src="images/img5.png" alt="">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- 4th section -->
-        <section >
-                <div>
-                    <div class="text-center space-y-6">
+        <section class="mx-auto" style="
+        background-image: url(images/bg.jpg);
+        ">
+                <div class="lg:p-28">
+                    <div class="text-center space-y-6 pt-9 lg:p-0">
                         <button class="btn px-8 rounded-full bg-lime-200"><i class="fa-solid fa-arrow-right"></i>Lets Connect</button>
-                        <h1 class="text-4xl font-bold">Let's Discuss Next Project</h1>
-                        <p class="lg:w-3/5 mx-auto text-gray-500">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+                        <h1 class="mx-auto text-2xl font-extrabold w-3/5 lg:text-4xl lg:font-bold">Let's Discuss Next Project</h1>
+                        <p class="lg:w-3/5 w-11/12 mx-auto text-gray-500">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents</p>
                     </div>
-                    <div class="container mx-auto mt-8 grid grid-cols-10 gap-4">
-                        <input placeholder="First name*" type="text" class="border rounded-full pl-4 col-span-5 p-4">
-                        <input placeholder="Last name*" type="text" class="border rounded-full pl-4 col-span-5 p-4">
-                        <input placeholder="Phone Number*" type="number" name="" id="" class="border rounded-full pl-4 col-span-5 p-4">
-                        <input placeholder="Email Number*" type="email" name="" id="" class="border rounded-full pl-4 col-span-5 p-4">
-                        <input placeholder="Write your massage here" type="text" class="h-40 border rounded-2xl pl-4 col-span-10">
+                    <div class="container mx-auto mt-8 grid lg:grid-cols-10 gap-4 p-9">
+                        <input placeholder="First name*" type="text" class="border rounded-full pl-4 lg:col-span-5 p-4">
+                        <input placeholder="Last name*" type="text" class="border rounded-full pl-4 lg:col-span-5 p-4">
+                        <input placeholder="Phone Number*" type="number" name="" id="" class="border rounded-full pl-4 lg:col-span-5 p-4">
+                        <input placeholder="Email Number*" type="email" name="" id="" class="border rounded-full pl-4 lg:col-span-5 p-4">
+                         <textarea placeholder="Write your massage here" name="" id="" class=" h-44 border rounded-2xl lg:col-span-10 text-gray-400 pl-4 pt-4"></textarea>
+                         <a class="btn rounded-full bg-book-consult lg:col-span-10">Send Mail <i class="fa-solid fa-arrow-right p-2 rounded-full bg-black text-white -rotate-45"></i></a>
                     </div>
                 </div>
         </section>
 
     </main>
     <!-- footer section -->
-    <footer></footer>
+    <footer class="bg-footercolor">
+        <div class="text-center py-24">
+            <a class="font-bold text-xl text-white"> <i class="fa-solid fa-arrow-right p-2 rounded-full bg-book-consult text-black -rotate-45"></i> Rinterio</a>
+            <p class="w-3/5 mx-auto mt-4 mb-4 text-color">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+                <ul class="lg:flex justify-center gap-20 mb-9 space-y-4">
+                    <li class="text-gray-400 hover:text-white"><a>Home</a></li>
+                    <li class="text-gray-400 hover:text-white"><a>Services</a></li>
+                    <li class="text-gray-400 hover:text-white"><a>Portfolio</a></li>
+                    <li class="text-gray-400 hover:text-white"><a>Blogs</a></li>
+                    <li class="text-gray-400 hover:text-black"><a>Contact Us</a></li>
+                </ul>
+            <a class="btn rounded-full bg-book-consult w-80 lg:w-60 text-xl font-extrabold">Book Consult <i class="fa-solid fa-arrow-right p-2 rounded-full bg-black text-white -rotate-45"></i></a>
+        </div>
+    </footer>
 </body>
 
-</html>
+</ht
